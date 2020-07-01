@@ -33,7 +33,7 @@
   - Learn and get into the habit of using `git add -p`
 - Use Tags to mark releases, instead of creating a branch "just in case".
 - Create Git aliases to make your life easier
-- Use pull requests if it makes sense. But don't use PRs as the quality tollgate.
+- Use pull requests if it makes sense. But don't use human code reviews as the main quality tollgate.
 - Push to remote as often as you can, you don't want your colleagues to suffer a "big bang merge"
 - Protect your remote master and other important branches from direct pushes (especially force pushes).
   - Protecting from force pushes is a setting on the Git server (GitHub)

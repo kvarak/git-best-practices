@@ -1,6 +1,8 @@
 
 # Git is cool. But how do we use it?
 
+![https://xkcd.com/1597/](https://imgs.xkcd.com/comics/git.png "If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything.")
+
 https://xkcd.com/1597/
 
 ## Do's and Dont's when using Git
@@ -44,6 +46,3 @@ https://xkcd.com/1597/
 
 - http://opinionatedgit.com/
 - https://dangitgit.com/en
-
-
-

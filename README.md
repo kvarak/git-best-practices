@@ -39,7 +39,7 @@
   - Protecting from force pushes is a setting on the Git server (GitHub)
   - Protecting from direct pushes needs a CI that does the pushes for you.
 - Learn how to write a Git commit message - [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/)
-- Make sure your .gitconfig is up to date for what you're developing in. [https://www.gitignore.io/](https://www.gitignore.io/)
+- Make sure your .gitignore is up to date for what you're developing in. [https://www.gitignore.io/](https://www.gitignore.io/)
 - Sharpen your Git skills by practising often: [https://github.com/praqma-training/git-katas/](https://github.com/praqma-training/git-katas/)
 
 ## More reading

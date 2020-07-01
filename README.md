@@ -3,7 +3,7 @@
 
 ![https://xkcd.com/1597/](https://imgs.xkcd.com/comics/git.png "If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything.")
 
-https://xkcd.com/1597/
+[https://xkcd.com/1597/](https://xkcd.com/1597/)
 
 ## Do's and Dont's when using Git
 
@@ -38,11 +38,11 @@ https://xkcd.com/1597/
 - Protect your remote master and other important branches from direct pushes (especially force pushes).
   - Protecting from force pushes is a setting on the Git server (GitHub)
   - Protecting from direct pushes needs a CI that does the pushes for you.
-- Learn how to write a Git commit message - https://chris.beams.io/posts/git-commit/
-- Make sure your .gitconfig is up to date for what you're developing in. https://www.gitignore.io/
-- Sharpen your Git skills by practising often: https://github.com/praqma-training/git-katas/
+- Learn how to write a Git commit message - [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/)
+- Make sure your .gitconfig is up to date for what you're developing in. [https://www.gitignore.io/](https://www.gitignore.io/)
+- Sharpen your Git skills by practising often: [https://github.com/praqma-training/git-katas/](https://github.com/praqma-training/git-katas/)
 
 ## More reading
 
-- http://opinionatedgit.com/
-- https://dangitgit.com/en
+- [http://opinionatedgit.com/](http://opinionatedgit.com/)
+- [https://dangitgit.com/en](https://dangitgit.com/en)

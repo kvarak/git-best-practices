@@ -277,16 +277,27 @@ Have the habit to delete branches that aren't needed. Good branch hygiene. Both 
 ## Workflows
 
 ### Pick a workflow
-Pick a workflow, and use it. If you have one, read up on it.
+Use your workflow. If you don't have one, pick one or make one. It's important that your workflow is clear and concise for everyone that should follow it. If you don't understand some parts of the workflow or your solutions differ from the workflow, then make sure to gather the team and talk about it. Maybe the workflow can be improved, or maybe you learn something new.
 
 ### Use Tags to mark releases
-Use Tags to mark releases, instead of creating a branch "just in case".
+Do not create branches "just in case".
 
 ### Use pull requests if it makes sense
-Use pull requests if it makes sense. But don't use human code reviews as the main quality tollgate.
+*If a tool mentions `merge requests`, then that's the same thing as `pull requests`.*
+
+Don't use human code reviews as the main quality tollgate. In a best case scenario, you have automated tests that verifies that the product does the things right.
+
+Use pull requests for:
+- Validating that the product does the right thing
+- Knowledge sharing
+
+Do not use pull requests for:
+- Verifying that the product does the thing right
+- Checking coding guidelines
+
+One of my pet peeves with pull requests is that they are a hindrance in the value flow. Without pull requests, you don't need to wait until the automation system can pull the change into production. This, however, sets certain requirements that you can test and verify the changes in your pipeline. Also to consider is that an automation system can seldom validate the changes. So, how to keep human validation and knowledge sharing, but still not stop the pipeline? What I suggest is that you, once a week (depending on your change rate), have a validation time slot, where the senior developers (the ones that usually are the pull request approvers) - and everyone that has the time - checks all changes that went through since the last time you had a validation time slot. During this time slot, you validate that the changes actually solved the right problems and you get a knowledge sharing session as a side effect. In this way there's no stop in the pipeline and all approvers don't need to context switch between their work and approving code changes.
 
 ### Git is not an artifact management system
-Git is not an artifact management system
 - Avoid large binaries (Word documents are binaries)
 - Don't commit auto generated files if they can be generated on the fly
 

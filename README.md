@@ -103,7 +103,7 @@ Another scenario when it's better to update HEAD instead of trying to giving Git
 If you're using longer Git command regulary, it's a good idea to create an *alias* for it. One of the most used one I have is a nice log print.
 
 ```
-git config --global alias.l10 "log -n 10 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
+> git config --global alias.l10 "log -n 10 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all"
 ```
 If you have the above *alias*, writing `git l10` will give you the something like the following output (the example is from the git-katas repository):
 
@@ -199,7 +199,7 @@ When working on your local branch and it's time to push it, you might have some 
 ![before interactive rebase](img/local-branch-1.png)
 
 ```
-git rebase master -i
+> git rebase master -i
 ```
 *After interactive rebase:*
 ![after interactive rebase](img/local-branch-2.png)
@@ -208,17 +208,17 @@ git rebase master -i
 
 ### Use rebase as your default merge
 
-Keeping your local master branch up to date is pretty important. Because everything you deliver (push), should be based on the latest on master and if your local master isn't up-to-date with the remote master, then you'll get into trouble (either by not being allowed to deliver or, even worse, nothing is stopping you and your delivery is merged with the remote master and it'll end up in an unknown state, more on that [TODO:here]()) Assuming you've read about [creating a local branch](#create-a-local-branch) above, and are trying to follow it, keeping you local master updated shouldn't give you too much headache.
+Keeping your local master branch up to date is pretty important. Because everything you deliver (push), should be based on the latest on master and if your local master isn't up-to-date with the remote master, then you'll get into trouble (either by not being allowed to deliver or, even worse, nothing is stopping you and your delivery is merged with the remote master and it'll end up in an unknown state) Assuming you've read about [creating a local branch](#create-a-local-branch) above, and are trying to follow it, keeping you local master updated shouldn't give you too much headache.
 
-The default behaviour of a `git pull` is that Git will fetch `origin/master` and then merge that branch to your `master` branch. Assuming you stand on `master` when performing the operation.
+The default behaviour of a `git pull` is that Git will fetch `origin/master` and then merge that branch to your `master` branch (assuming you stand on `master` when performing the operation).
 
 *Is merge bad?*
 
-Merging has its uses, but the thing is that in many cases you want your local master to be a mirror of the remote master (depending on your [workflow](#pick-a-workflow)), and the default behaviour will either you get a merge conflict (which can be very confusing) or it'll happily merge and you wouldn't know something is wrong until later. Best case scenario, you'll get an extra commit (a merge commit) that'll end up in your git history, taking place and confusing a future reader.
+Merging has its uses, but in many cases you want your local master to be a mirror of the remote master, and the default behaviour will either you get a merge conflict (which can be very confusing) or it'll happily merge and you wouldn't know something is wrong until later. Best case scenario, you'll get an extra commit (a merge commit) that'll end up in your git history, taking place and confusing a future reader.
 
 *Using fast-forward-only as default when you pull.*
 
-Often you want your local master to mirror the remote master; only allowing fast-forward changes when you pull (`git pull --ff-only`). This will have the benefit that it'll abort the pull if something is wrong (for instance you have accidentally committed something on your local master). This is especially true if your [workflow](#pick-a-workflow) is to use *pull requests* or *ready branches*.
+Often you want your local master to mirror the remote master; only allowing fast-forward changes when you pull (`git pull --ff-only`). This will have the benefit that it'll abort the pull if something is wrong (for instance you have accidentally committed something on your local master). This is especially true if your workflow is to use *pull requests* or *ready branches*.
 
 ```
 > git pull --ff-only
@@ -230,7 +230,7 @@ If you always want to use this way, you can set this as the default pull operati
 
 *Using rebase as your default merge.*
 
-Unless your [workflow](#pick-a-workflow) specifies it, you should really use rebase as your default pull operation, either by always writing `git pull -r` or by setting it as default in your gitconfig:
+Unless your workflow specifies it, you should really use rebase as your default pull operation, either by always writing `git pull -r` or by setting it as default in your gitconfig:
 
 ```
 > git config --global pull.rebase true

@@ -44,6 +44,10 @@ Links
 
 ---
 
+NOTE: In the text below, I use the name `master` for the main development branch; the default branch of the repository. If you for some reason have another name for that branch, then you should read master as that name. After all, master is just a name.
+
+---
+
 # More context
 
 ## Start here
@@ -226,29 +230,39 @@ If you always want to use this way, you can set this as the default pull operati
 
 *Using rebase as your default merge.*
 
-Unless your [workflow](#pick-a-workflow) specifies it, you should really use rebase as your default pull operation, either by always writing `git pull -r` or by setting is as default in your gitconfig:
+Unless your [workflow](#pick-a-workflow) specifies it, you should really use rebase as your default pull operation, either by always writing `git pull -r` or by setting it as default in your gitconfig:
 
 ```
 > git config --global pull.rebase true
 ```
 
 ### Only fast-forward to master
+This has been touched upon in a couple of points already, but it's so important it gets a point of its own.
+
+Why should you *only fast-forward to master*?
+
+The master branch is the branch that everything else is built upon. It's also the branch that all developers are using - although sometimes indirectly via feature branches. This means that if you happen to change the history of the master branch, this could make life much harder *for everyone else* that is using that branch.
+
+It's also important to think about this when working locally. If you happen to change the history of your local master branch, then this will only affect you. Maybe not directly, but when you later in your work want to push it to remote and can't.
+
+If you make changes to master - only fast-forward.
 
 ### Don't rewrite published history
-But don't rewrite published history multiple people work on.
+The same tip as for master goes to most branches on the remote. If something is pushed, the odds are that somebody is working on that branch. Unless you know for a fact that the branch is ok to rewrite, don't do it. Even if it's a "just feature branch" it could be devastating for some developers if you rewrite the history.
 
-That's the general rule, but more or less a rule for the branches that needs to be "steady". Rebasing a feature branch that have been pushed while "work-in-progress" is in most cases fine.
+In general, don't rewrite published history multiple people work on.
 
 ### Pull often
-Keep up to date - pull often
+
+Keeping your local master and other branches that you base your work on fairly up-to-date could help you in the long run. You don't need to pull all the time, just often enough so that when you want to push, you don't get a big merge you need to solve. You could say that every time you're at a checkpoint in your development, pull and rebase your feature branch before going to the next step.
 
 ### Push as often as you can
-Push to remote as often as you can, you don't want your colleagues to suffer a "big bang merge"
+If you pull and rebase at every mental checkpoint, why not make the habit of pushing that? If you try to do that you will make it easier for your colleagues because they will not suffer a "big bang merge" which will be the case if you wait too long before pushing.
 
 ### Protect your important branches
-Protect your remote master and other important branches from direct pushes (especially force pushes).
-- Protecting from force pushes is a setting on the Git server (GitHub)
-- Protecting from direct pushes needs a CI that does the pushes for you.
+We've mentioned that you shouldn't change the history on master branches and other important branches, but mistakes do happen. What you should do is set up your git remote (for instance GitHub) so that it's not possible to force push.
+
+Another, a bit more work needed, protection is to protect your important branches from any direct pushes, and only allow a CI server to make the pushes for you. This do require more work, and a CI server. The benefit is that you'll have a robot gatekeeper that can execute different kinds of tests, increasing the chance of having master stable.
 
 ### Update your local repo before you start working
 Update your local repo before you start working from the remote([read this](#use-rebase-as-your-default-merge)).

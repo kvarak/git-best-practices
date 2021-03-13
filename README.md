@@ -1,7 +1,7 @@
 
 # Git is cool. But how do we use it?
 
-![https://xkcd.com/1597/](https://imgs.xkcd.com/comics/git.png "If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything.")
+<img align="right" src="https://imgs.xkcd.com/comics/git.png" alt="If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. Just wait through a few minutes of 'It's really pretty simple, just think of branches as...' and eventually you'll learn the commands that will fix everything."/>
 
 [https://xkcd.com/1597/](https://xkcd.com/1597/)
 

@@ -86,7 +86,7 @@ Unsure what happened? Learn how to use `git reflog` to investigate. It'll basica
 
 ### HEAD is where the changes should happen
 
-One of the best habits around is to make changes on the branch you don't stand on. It's very possible to make changes on any branch from anywhere. If you know what you're doing it can be some kind of shortcut, but it's basically always a more complicated way of doing a multi-step operation. For example:
+One of the best habits around is to make changes on the branch you stand on. It's very possible to make changes on any branch from anywhere. If you know what you're doing it can be some kind of shortcut, but it's basically always a more complicated way of doing a multi-step operation. For example:
 
 ```
 > git checkout topic

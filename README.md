@@ -44,7 +44,7 @@ Links
 
 ---
 
-NOTE: In the text below, I use the name `master` for the main development branch; the default branch of the repository. If you for some reason have another name for that branch, then you should read master as that name. After all, master is just a name.
+NOTE: In the text below, I use the name `master` for the main development branch; the default branch of the repository. If you for some reason have another name for that branch, then you should read master as that name.
 
 ---
 

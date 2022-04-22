@@ -185,7 +185,7 @@ Mistakes happen and it's often easier to be preventive than fix the mistakes. On
 ```
 If you're lazy (like me sometimes), you'll end up writing `git add .` and everything you've changed (and all the new files) will end up in the commit. Maybe not always what you wanted.
 
-Sometimes you don't want to add multiple changes in the same file, then `git add -p` is a neat way of selecting blocks of changes for the commit. I recomment that you experiment with it.
+Sometimes you don't want to add multiple changes in the same file, then `git add -p` is a neat way of selecting blocks of changes for the commit. I recommend that you experiment with it.
 
 ```
 > git add -p

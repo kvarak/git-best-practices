@@ -130,6 +130,8 @@ There are a couple of good rules you should try to follow:
 1. Wrap the body at 72 characters
 1. Use the body to explain what and why vs. how
 
+Note: However, if you're working with issues (Jira, Github issues, etc.) it is always a good practice to mention the issue you're fixing or the issue this commit relates to.
+
 I won't go into the details, but read the following blog post for deeper understanding - [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/).
 
 Now, remember that this is for the commits that will live on for the future. You don't really need to be so hard on the commit messages if you're working on a feature branch and know that you'll rebase interactively later on, or if you need to push some things to a remote temporary branch to be able to build.
